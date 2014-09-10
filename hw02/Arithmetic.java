@@ -59,6 +59,8 @@ public class Arithmetic {
         System.out.println("The tax on the purchase was "+(taxTotal$)+".");
     }
 }    
+
+//I couldn't figure out what I was doing wrong with the rounding. I googled a bunch of answwers, but I couldn't get it right.
         
         
         
