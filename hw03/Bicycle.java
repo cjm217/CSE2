@@ -59,6 +59,8 @@ public class Bicycle {
         
         //Print out the Avg. speed
         System.out.printf("The Average mph was %4.2f", speedAverage);
+        
+        //Keep the terminal looking cleaner
         System.out.println();
     }    
 }   
