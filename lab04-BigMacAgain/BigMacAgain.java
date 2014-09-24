@@ -142,7 +142,7 @@ public class BigMacAgain {
                     
                 
                 
-                }
+            }
             
             
             //Print out the error statement if the integer is <0
