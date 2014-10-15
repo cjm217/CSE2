@@ -51,24 +51,24 @@ public class Root {
                 double middle = ((high-low)/2);
                 
                 //Update bounds based on this
-                if((middle^2) > original){
+                if((Math.pow(middle, 2)) > original){
                     
                     //Change high to match the new bounds
-                    double high = middle^2;
+                    double highNum = (Math.pow(middle, 2));
                     
                     }
                 
                 //Update bounds based on the value of middle squared
-                else if((middle^2) < original){
+                else if(((Math.pow(middle, 2)) < original)){
                     
                     //Change low to match new bounds
-                    double low = middle^2;
+                    double lowNum = (Math.pow(middle, 2));
                     
                     }    
                 }
             
             //Print out the results
-            System.out.println("The square root of "+original+"is "+high);
+            System.out.println("The square root of "+original+"is "+highNum);
             
             
             
