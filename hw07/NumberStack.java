@@ -111,10 +111,10 @@ public class NumberStack {
 
         }
 
-
+    //Print out clarity statement
     System.out.println("Using While Loops:");
     
-    
+    //Initialize all integers
     int h = 1;
     
     int l; 
@@ -128,11 +128,13 @@ public class NumberStack {
     //Begin loop for the rows
         while(h < (n + 1)){
             
+            //Set beginning value
             q=0;
             
             //Begin loop for digits
             while(q < h){
 
+                //Set beginning value
                 l=0;
                 
                 //Begin space loop
@@ -140,11 +142,14 @@ public class NumberStack {
                     
                     //Print space
                     System.out.print(" ");
-
+                    
+                    
+                    //Add to counter
                     l++;
                 
                 }
                 
+                //Set initial value
                 p=1;
                 
                 //Loop for the digits
@@ -154,10 +159,12 @@ public class NumberStack {
                     //Print the value
                     System.out.print(h);
 
+                    //Add to counter
                     p++;
 
                 }
                 
+                //Set initial value
                 l=0;
                 
                 //Loop for the spaces    
@@ -166,7 +173,7 @@ public class NumberStack {
                     //Print space
                     System.out.print(" ");
 
-                
+                    //Add one to counter
                     l++;
                     
                 }
@@ -175,12 +182,14 @@ public class NumberStack {
                 //Print line
                 System.out.println();
 
+                //Add to counter
                 q++;
             }
             
             //Print line
             System.out.println();
 
+            //Set initial value
             l=0;
             
             //Print space loop
@@ -190,10 +199,12 @@ public class NumberStack {
                 //Print space
                 System.out.print(" ");
 
+                //Add to counter
                 l++;
                 
             }
             
+            //Set initial value
             p=1;
             
             //Print the dash loop
@@ -202,6 +213,7 @@ public class NumberStack {
                 //Print the dash
                 System.out.print("-");
             
+                //Add to counter
                 p++;
 
             }
@@ -209,6 +221,7 @@ public class NumberStack {
             //Print line
             System.out.println();
 
+            //Set initial value
             l=0;
             
             //Print the space loop
@@ -217,7 +230,9 @@ public class NumberStack {
                 
                 //Print space
                 System.out.print(" ");
-
+                
+                
+                //Add to counter
                 l++;
                 
                 
@@ -226,11 +241,15 @@ public class NumberStack {
             //Print line
             System.out.println();
             
+        //Add to counter    
         h++;
 
         }
-        
+    
+    //Print out final clarity statement    
     System.out.println("Using Do-While Loops:");
+    
+  
 
     
 
