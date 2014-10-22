@@ -249,7 +249,152 @@ public class NumberStack {
     //Print out final clarity statement    
     System.out.println("Using Do-While Loops:");
     
-  
+    //initial value
+    h=1;
+    
+    //Begin loop for the rows
+        do{
+            
+            //Set beginning value
+            q=0;
+            
+            //Begin loop for digits
+            do{
+
+                //Set beginning value
+                l=0;
+                
+                //Begin space loop
+                do{
+                    
+                    //Print space
+                    System.out.print(" ");
+                    
+                    
+                    //Add to counter
+                    l++;
+                
+                }
+                
+                //Set constraint
+                while(l < n - h);
+                
+                //Set initial value
+                p=1;
+                
+                //Loop for the digits
+                do{
+
+
+                    //Print the value
+                    System.out.print(h);
+
+                    //Add to counter
+                    p++;
+
+                }
+                
+                //Parameters
+                while(p < (2 * h));
+                
+                //Set initial value
+                l=0;
+                
+                //Loop for the spaces    
+                do{
+                    
+                    //Print space
+                    System.out.print(" ");
+
+                    //Add one to counter
+                    l++;
+                    
+                }
+                
+                //Guidelines to follow
+                while(l < n - h);
+                
+                //Print line
+                System.out.println();
+
+                //Add to counter
+                q++;
+            }
+            
+            //Set the constraints
+            while(q < h);
+            
+            //Print line
+            System.out.println();
+
+            //Set initial value
+            l=0;
+            
+            //Print space loop
+            do{
+                
+                
+                //Print space
+                System.out.print(" ");
+
+                //Add to counter
+                l++;
+                
+            }
+            
+            //Check the boundaries
+            while(l < n - h);
+            
+            //Set initial value
+            p=1;
+            
+            //Print the dash loop
+            do{
+                
+                //Print the dash
+                System.out.print("-");
+            
+                //Add to counter
+                p++;
+
+            }
+            
+            //Set the borders
+            while(p < (2 * h));
+            
+            //Print line
+            System.out.println();
+
+            //Set initial value
+            l=0;
+            
+            //Print the space loop
+            do{
+                
+                
+                //Print space
+                System.out.print(" ");
+                
+                
+                //Add to counter
+                l++;
+                
+                
+            }
+            
+            //Set the loop's bounds
+            while(l < n - h);
+            
+            //Print line
+            System.out.println();
+            
+        //Add to counter    
+        h++;
+
+        }
+        
+        //Constraints
+        while(h < (n + 1));
 
     
 
