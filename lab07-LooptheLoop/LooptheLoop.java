@@ -6,105 +6,135 @@
 //
 
 //import the scanner
-import java.util.Scanner;
+import java.util.Scanner; 
 
 //Define the class
 public class LooptheLoop {
+    
+    //Define the main method
+    public static void main(String arg[]) {
 
-    //Create a main method
-    public static void main(String [] args){
-    
-    //define n
-    int n=0;
-        
-    //Declare the scanner
-    Scanner myScanner;
-    
-    //Declare another scanner
-    Scanner myScanner2;
-    
-    //Construct the scanner
-	myScanner =new Scanner(System.in);
-        
 
-    //Prompt the user for an int
-    System.out.print("Enter an int- ");
+            //Declare the scanner
+            Scanner myScanner; 
+            
+            //Construct the scanner
+            myScanner = new Scanner(System.in);
 
-    //Check if n is correct
-    n=myScanner.nextInt();
-    
-    if(n>0 && n<16){
-    
-        //Begin infinite loop
-        while(true){
-    
-            //Declare an int
-            int m=0;
-    
-            //Begin loop
-            while(m<n){
-        
-                //define k
-                int k=0;
-        
-                //construct the while loop
-                while(k < m+1){
-        
-                    //Print out the statement
-                    System.out.print("*");
-        
-                    //Add one to the counter
-                    k++;
-        
+            //Define the number of stars
+            int nStars = 0;
+            
+            //Define the empty string
+            String junk = "";
+            
+            //Define the next empty string
+            String cont = "";
+
+
+            //Run loop until the user breaks out
+            while (true) {
+                
+                //Loop that controls the size
+                while (nStars < 1 || nStars > 15) {
+                    
+                    //Prompt the user for their input
+                    System.out.print("Enter an int between 1 and 15:  ");                 
+                    
+                    //Define when the scanner will accept the input
+                    while (!myScanner.hasNextInt()) {          
+                        
+                        //Looks into input for stars
+                        junk = myScanner.next();            
+                        
+                        //Prompt the user for an input
+                        System.out.print("Enter an int between 1 and 15:  "); 
+
+
+                    } //End the while loop inside
+                    
+                    //Accept the input for stars
+                    nStars = myScanner.nextInt(); 
+                    
+                    //Error statement generator
+                    if (nStars < 1 || nStars > 15) { 
+                        
+                        //error statement
+                        System.out.println("Your int was not in the range [1 to 15]"); 
+                    
+                        
+                    } //end the if statement
+                } //end the outer while loop
+
+                //Control the loop
+                int counter = 1; 
+                
+                //Control the inner loop
+                int lineCounter = 1; 
+
+                //while loop that prints stars
+                while (counter <= nStars) { 
+                    
+                    //Print the star
+                    System.out.print("*"); 
+                    
+                    //Add 1 to the counter
+                    counter++; 
+                    
+                } //end the loop
+                System.out.println(""); //moves to next row for output   
+                
+                //Reset the count
+                counter = 1; 
+                
+                //Prints out stars with loop
+                while (counter <= nStars) { 
+                    
+                    //while loop that prints the right amount of stars
+                    while (lineCounter <= counter) { 
+                        
+                        //Print a star
+                        System.out.print("*"); 
+                        
+                        //add one to the count
+                        lineCounter++; 
+                        
+                    
+                    } //end the inside loop
+                    
+                    //reset the count
+                    lineCounter = 1; 
+                    
+                    //print a row
+                    System.out.println(); 
+                    
+                    //add to the count
+                    counter++;
+
+                } //end of while loop
+                
+                //Ask the user if they want to go again
+                System.out.print("Would you like to continue? If so, enter y or Y");
+                
+                //accept the user's input 
+                cont = myScanner.next(); 
+                
+                //conditions for continuing
+                if ((cont.equals("Y")) || (cont.equals("y"))) {}
+                
+                //default case
+                else {
+                    
+                    //break from the largest loop
+                    break;
                 }
-        
-            //Move to the next row
-            System.out.println();
-        
-            //add another star to the int
-            m++;
-        
-            }
-            
-            //Construct a new scanner
-            myScanner2 = new Scanner( System.in );
-            
-            //Print out the continue statement
-            System.out.print("Enter y or Y to go again: ");
-            
-            //Get the answer
-            String answer=myScanner2.next();
-            
-            //Check the answer
-            if(answer.equals("n") || answer.equals("N")){
-                
-                //Break out
-                break;
-            }
-            
-            else if(answer.equals("y") || answer.equals("Y")){
-            
-            }
-            
-            else{
-                
-                //Print error statement
-                System.out.println("You did not print one of y, Y, n, N");
-                
-                //Break from the loop
-                break;
-            }
-            
-        }
-    
-    }
-    
-    else{
-        
-        //Print error statement
-        System.out.println("You did not enter a valid int");
-        
-    }
 
-    }
-}
+                //reset the stars counter
+                nStars = 0;
+
+
+
+
+            } //end of while true loop
+
+        } //end main method   
+} //end class
